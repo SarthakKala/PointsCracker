@@ -1,5 +1,22 @@
 const MAX_POINTS = 10_000_000;
 
+function formatWithCommas(value: number): string {
+  return value.toLocaleString('en-IN');
+}
+
+function parseDigits(raw: string): number {
+  const digits = raw.replace(/\D/g, '');
+  if (digits === '') return 0;
+  return parseInt(digits, 10);
+}
+
+function moveCursorToEnd(input: HTMLInputElement): void {
+  requestAnimationFrame(() => {
+    const end = input.value.length;
+    input.setSelectionRange(end, end);
+  });
+}
+
 export function renderPointsInput(
   container: HTMLElement,
   onChange: (points: number) => void,
@@ -16,6 +33,7 @@ export function renderPointsInput(
   input.className = 'points-input';
   input.placeholder = '0';
   input.autocomplete = 'off';
+  input.dir = 'ltr';
 
   const error = document.createElement('p');
   error.className = 'input-error hidden';
@@ -36,37 +54,42 @@ export function renderPointsInput(
     }
   }
 
-  input.addEventListener('input', () => {
-    const raw = input.value.trim();
-    capNote.classList.add('hidden');
+  function applyValue(points: number, showCapNote: boolean): void {
+    input.value = points > 0 ? formatWithCommas(points) : '';
+    if (showCapNote) {
+      capNote.textContent = `Maximum ${formatWithCommas(MAX_POINTS)} points.`;
+      capNote.classList.remove('hidden');
+    } else {
+      capNote.classList.add('hidden');
+    }
+    setError('');
+    onChange(points);
+    moveCursorToEnd(input);
+  }
 
-    if (raw === '') {
+  input.addEventListener('focus', () => moveCursorToEnd(input));
+  input.addEventListener('click', () => moveCursorToEnd(input));
+
+  input.addEventListener('input', () => {
+    const digitsOnly = input.value.replace(/\D/g, '');
+
+    if (digitsOnly === '') {
+      input.value = '';
+      capNote.classList.add('hidden');
       setError('');
       onChange(0);
       return;
     }
 
-    if (!/^\d*\.?\d*$/.test(raw) || raw === '.') {
-      setError('Enter a valid number of points.');
-      return;
-    }
+    let points = parseDigits(digitsOnly);
+    let capped = false;
 
-    const parsed = Number(raw);
-    if (!Number.isFinite(parsed) || parsed < 0) {
-      setError('Points cannot be negative.');
-      return;
-    }
-
-    let points = Math.floor(parsed);
     if (points > MAX_POINTS) {
       points = MAX_POINTS;
-      input.value = String(MAX_POINTS);
-      capNote.textContent = `Maximum ${MAX_POINTS.toLocaleString('en-IN')} points.`;
-      capNote.classList.remove('hidden');
+      capped = true;
     }
 
-    setError('');
-    onChange(points);
+    applyValue(points, capped);
   });
 
   container.replaceChildren(label, input, error, capNote);

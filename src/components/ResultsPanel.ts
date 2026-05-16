@@ -1,17 +1,18 @@
 import type { CalculationResult } from '../types';
+import { CATEGORY_ICONS } from './categoryIcons';
 
 const CATEGORY_META: Record<
   keyof Pick<
     CalculationResult,
     'cashback' | 'flights' | 'hotels' | 'shopping' | 'statementCredit'
   >,
-  { label: string; icon: string }
+  { label: string }
 > = {
-  cashback: { label: 'Cashback', icon: '💳' },
-  flights: { label: 'Flights', icon: '✈️' },
-  hotels: { label: 'Hotels', icon: '🏨' },
-  shopping: { label: 'Shopping vouchers', icon: '🛍️' },
-  statementCredit: { label: 'Statement credit', icon: '📄' },
+  cashback: { label: 'Cashback' },
+  flights: { label: 'Flights' },
+  hotels: { label: 'Hotels' },
+  shopping: { label: 'Shopping vouchers' },
+  statementCredit: { label: 'Statement credit' },
 };
 
 function formatRupee(value: number): string {
@@ -21,6 +22,14 @@ function formatRupee(value: number): string {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
   }).format(value);
+}
+
+function createCategoryIcon(categoryKey: string): HTMLElement {
+  const span = document.createElement('span');
+  span.className = 'result-icon';
+  span.setAttribute('aria-hidden', 'true');
+  span.innerHTML = CATEGORY_ICONS[categoryKey] ?? CATEGORY_ICONS.cashback;
+  return span;
 }
 
 export function renderResults(
@@ -65,7 +74,12 @@ export function renderResults(
 
     const left = document.createElement('div');
     left.className = 'result-row-left';
-    left.innerHTML = `<span class="result-icon" aria-hidden="true">${row.icon}</span><span class="result-label">${row.label}</span>`;
+    left.append(createCategoryIcon(row.key));
+
+    const labelEl = document.createElement('span');
+    labelEl.className = 'result-label';
+    labelEl.textContent = row.label;
+    left.append(labelEl);
 
     const right = document.createElement('div');
     right.className = 'result-row-right';
