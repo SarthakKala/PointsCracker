@@ -1,0 +1,336 @@
+{
+  "cards": [
+    {
+      "id": "hdfc-regalia",
+      "name": "HDFC Regalia",
+      "bank": "HDFC Bank",
+      "pointsPerRupee": 0.03,
+      "expiryMonths": 24,
+      "minRedemptionPoints": 0,
+      "redemptionRates": {
+        "cashback": 0.20,
+        "flights": 0.50,
+        "hotels": 0.50,
+        "shopping": 0.35,
+        "statementCredit": 0.20
+      },
+      "bonusCategories": [],
+      "cappedAt": 4000,
+      "notes": "4 RPs per ₹150 base (≈0.0267, rounded to 0.03); earn cap 4,000 RPs/month; milestone lump sums: 5,000 RPs on ₹5L annual spend and 10,000 RPs on ₹8L; 1 RP = 0.5 airmile on transfer; ₹99 redemption fee per request; source: hdfcbank.com/personal/pay/cards/credit-cards/regalia-credit-card"
+    },
+    {
+      "id": "hdfc-millennia",
+      "name": "HDFC Millennia",
+      "bank": "HDFC Bank",
+      "pointsPerRupee": 0.01,
+      "expiryMonths": 24,
+      "minRedemptionPoints": 500,
+      "redemptionRates": {
+        "cashback": 1.00,
+        "flights": 0.30,
+        "hotels": 0.30,
+        "shopping": 0.30,
+        "statementCredit": 1.00
+      },
+      "bonusCategories": [
+        { "category": "amazon", "multiplier": 5.0 },
+        { "category": "flipkart", "multiplier": 5.0 },
+        { "category": "swiggy", "multiplier": 5.0 },
+        { "category": "uber", "multiplier": 5.0 },
+        { "category": "myntra", "multiplier": 5.0 },
+        { "category": "zomato", "multiplier": 5.0 },
+        { "category": "bookmyshow", "multiplier": 5.0 },
+        { "category": "cult-fit", "multiplier": 5.0 },
+        { "category": "sony-liv", "multiplier": 5.0 },
+        { "category": "tata-cliq", "multiplier": 5.0 }
+      ],
+      "cappedAt": 1000,
+      "notes": "CashPoints currency; 5% on 10 partner brands capped 1,000 CPs/month each; 1% on all other spends capped 1,000 CPs/month; flights/hotels via SmartBuy max 50% of booking value payable in points; ₹50 fee per statement credit redemption; source: hdfcbank.com/personal/pay/cards/millennia-cards/millennia-cc-new"
+    },
+    {
+      "id": "sbi-simplyclick",
+      "name": "SBI SimplyCLICK",
+      "bank": "SBI Card",
+      "pointsPerRupee": 0.01,
+      "expiryMonths": 24,
+      "minRedemptionPoints": 2000,
+      "redemptionRates": {
+        "cashback": 0.25,
+        "flights": 0.25,
+        "hotels": 0.25,
+        "shopping": 0.25,
+        "statementCredit": 0.25
+      },
+      "bonusCategories": [
+        { "category": "apollo-24x7", "multiplier": 10.0 },
+        { "category": "bookmyshow", "multiplier": 10.0 },
+        { "category": "cleartrip", "multiplier": 10.0 },
+        { "category": "dominos", "multiplier": 10.0 },
+        { "category": "igp", "multiplier": 10.0 },
+        { "category": "myntra", "multiplier": 10.0 },
+        { "category": "netmeds", "multiplier": 10.0 },
+        { "category": "yatra", "multiplier": 10.0 },
+        { "category": "other-online", "multiplier": 5.0 }
+      ],
+      "cappedAt": null,
+      "notes": "4 RPs = ₹1; Swiggy downgraded from 10x to 5x from Apr 2025; minimum redemption changing to 4,000 RPs from Apr 2026 for statement credit; ₹99 redemption fee; source: sbicard.com/en/personal/credit-cards/rewards/simplyclick-sbi-card.page"
+    },
+    {
+      "id": "sbi-card-prime",
+      "name": "SBI Card PRIME",
+      "bank": "SBI Card",
+      "pointsPerRupee": 0.02,
+      "expiryMonths": 24,
+      "minRedemptionPoints": 2000,
+      "redemptionRates": {
+        "cashback": 0.25,
+        "flights": 0.25,
+        "hotels": 0.25,
+        "shopping": 0.25,
+        "statementCredit": 0.25
+      },
+      "bonusCategories": [
+        { "category": "dining", "multiplier": 5.0 },
+        { "category": "groceries", "multiplier": 5.0 },
+        { "category": "movies", "multiplier": 5.0 },
+        { "category": "departmental-stores", "multiplier": 5.0 },
+        { "category": "birthday-spends", "multiplier": 10.0 }
+      ],
+      "cappedAt": null,
+      "notes": "2 RPs/₹100 base; birthday 20 RPs/₹100 capped 2,000 RPs/year; minimum redemption changing to 4,000 RPs from Apr 2026; ₹99 redemption fee; source: sbicard.com/en/personal/credit-cards/rewards/sbi-card-prime.page"
+    },
+    {
+      "id": "axis-flipkart",
+      "name": "Axis Flipkart",
+      "bank": "Axis Bank",
+      "pointsPerRupee": 0.015,
+      "expiryMonths": 0,
+      "minRedemptionPoints": 0,
+      "redemptionRates": {
+        "cashback": 1.00,
+        "flights": 1.00,
+        "hotels": 0.00,
+        "shopping": 1.00,
+        "statementCredit": 1.00
+      },
+      "bonusCategories": [
+        { "category": "flipkart", "multiplier": 3.33 },
+        { "category": "cleartrip", "multiplier": 3.33 },
+        { "category": "myntra", "multiplier": 5.0 },
+        { "category": "swiggy", "multiplier": 2.67 },
+        { "category": "uber", "multiplier": 2.67 },
+        { "category": "pvr", "multiplier": 2.67 },
+        { "category": "cult-fit", "multiplier": 2.67 }
+      ],
+      "cappedAt": 4000,
+      "notes": "Direct cashback card; 1 point treated as ₹1 cashback; base 1.5% on all spends; Flipkart/Cleartrip 5% capped ₹4,000/quarter; Myntra 7.5% capped ₹4,000/quarter; partner brands 4%; lounge access removed Jun 2025; auto-credited next billing cycle; source: axisbank.com/retail/cards/credit-card/flipkart-axis-bank-credit-card"
+    },
+    {
+      "id": "axis-magnus",
+      "name": "Axis Magnus",
+      "bank": "Axis Bank",
+      "pointsPerRupee": 0.06,
+      "expiryMonths": 36,
+      "minRedemptionPoints": 300,
+      "redemptionRates": {
+        "cashback": 0.20,
+        "flights": 0.20,
+        "hotels": 0.20,
+        "shopping": 0.20,
+        "statementCredit": 0.00
+      },
+      "bonusCategories": [
+        { "category": "spends-above-1.5l-monthly", "multiplier": 2.92 },
+        { "category": "travel-edge-portal", "multiplier": 5.0 }
+      ],
+      "cappedAt": null,
+      "notes": "12 EDGE RPs/₹200 base; 35 EDGE RPs/₹200 above ₹1.5L/month; miles transfer 5:2 ratio (5 RPs = 2 partner miles) for non-Burgundy cardholders; annual miles transfer cap: 5L RPs total (1L Group A, 4L Group B); no RPs on fuel, rent, govt, wallet, insurance, gold, utilities; points forfeited if no txn for 365 days or 30 days after card closure; source: axisbank.com/retail/cards/credit-card/magnus-credit-card"
+    },
+    {
+      "id": "icici-amazon-pay",
+      "name": "ICICI Amazon Pay",
+      "bank": "ICICI Bank",
+      "pointsPerRupee": 0.01,
+      "expiryMonths": 0,
+      "minRedemptionPoints": 0,
+      "redemptionRates": {
+        "cashback": 1.00,
+        "flights": 1.00,
+        "hotels": 1.00,
+        "shopping": 1.00,
+        "statementCredit": 1.00
+      },
+      "bonusCategories": [
+        { "category": "amazon-prime-members", "multiplier": 5.0 },
+        { "category": "amazon-non-prime", "multiplier": 3.0 },
+        { "category": "amazon-pay-partner-merchants", "multiplier": 2.0 }
+      ],
+      "cappedAt": null,
+      "notes": "Lifetime free; cashback auto-credited as Amazon Pay balance (1 RP = ₹1); no cashback on international/education transactions from Oct 2025, EMI, rent, fuel, gold; forex markup reduced to 1.99% from Oct 2025; no cap on earnings; source: icicibank.in/personal-banking/cards/credit-card/amazon-pay-credit-card.page"
+    },
+    {
+      "id": "icici-coral",
+      "name": "ICICI Coral",
+      "bank": "ICICI Bank",
+      "pointsPerRupee": 0.02,
+      "expiryMonths": 36,
+      "minRedemptionPoints": 0,
+      "redemptionRates": {
+        "cashback": 0.25,
+        "flights": 0.25,
+        "hotels": 0.25,
+        "shopping": 0.25,
+        "statementCredit": 0.25
+      },
+      "bonusCategories": [
+        { "category": "utilities-insurance", "multiplier": 0.5 }
+      ],
+      "cappedAt": null,
+      "notes": "2 RPs/₹100 retail; 1 RP/₹100 utilities and insurance (0.5x); milestone: 2,000 bonus RPs on ₹2L annual spend + 1,000 RPs per additional ₹1L up to 10,000 bonus/year; domestic lounge access requires ₹75,000 quarterly spend; source: icicibank.in/personal-banking/cards/credit-card/coral-credit-card.page"
+    },
+    {
+      "id": "kotak-811",
+      "name": "Kotak 811",
+      "bank": "Kotak Mahindra Bank",
+      "pointsPerRupee": 0.01,
+      "expiryMonths": 36,
+      "minRedemptionPoints": 2000,
+      "redemptionRates": {
+        "cashback": 0.20,
+        "flights": 0.25,
+        "hotels": 0.25,
+        "shopping": 0.25,
+        "statementCredit": 0.20
+      },
+      "bonusCategories": [
+        { "category": "online-spends", "multiplier": 2.0 }
+      ],
+      "cappedAt": null,
+      "notes": "1 RP/₹100 offline base; 2 RPs/₹100 online; cash/statement value cut to ₹0.20/RP from Jun 2025 (was ₹0.25); catalogue/voucher value ₹0.25/RP; no RPs on cash advances, fuel, railway transactions; milestone: ₹750 cashback or 4 PVR tickets on ₹75,000 annual spend; source: kotak.bank.in/en/personal-banking/cards/credit-cards/811-credit-card.html"
+    },
+    {
+      "id": "kotak-league-platinum",
+      "name": "Kotak League Platinum",
+      "bank": "Kotak Mahindra Bank",
+      "pointsPerRupee": 0.03,
+      "expiryMonths": 36,
+      "minRedemptionPoints": 2000,
+      "redemptionRates": {
+        "cashback": 0.07,
+        "flights": 0.10,
+        "hotels": 0.10,
+        "shopping": 0.10,
+        "statementCredit": 0.07
+      },
+      "bonusCategories": [
+        { "category": "airlines-travel-agencies-tour-operators", "multiplier": 2.0 },
+        { "category": "departmental-stores-durable-goods-electric-sales", "multiplier": 2.0 },
+        { "category": "all-categories-after-2l-annual-spend", "multiplier": 2.0 }
+      ],
+      "cappedAt": null,
+      "notes": "4 RPs/₹150 base (≈0.0267, rounded to 0.03); 8 RPs/₹150 on special categories; cash/statement value cut from ₹0.10 to ₹0.07/RP from Jun 2025; catalogue value ₹0.10/RP; milestone: 4 PVR tickets or 10,000 RPs on ₹1.25L spend per 6-month period; source: kotak.bank.in/en/personal-banking/cards/credit-cards/league-platinum-card.html"
+    },
+    {
+      "id": "amex-membership-rewards",
+      "name": "AmEx Membership Rewards (MRCC)",
+      "bank": "American Express India",
+      "pointsPerRupee": 0.02,
+      "expiryMonths": 36,
+      "minRedemptionPoints": 18000,
+      "redemptionRates": {
+        "cashback": 0.25,
+        "flights": 0.25,
+        "hotels": 0.58,
+        "shopping": 0.33,
+        "statementCredit": 0.25
+      },
+      "bonusCategories": [
+        { "category": "reward-multiplier-platform-amazon-flipkart", "multiplier": 5.0 }
+      ],
+      "cappedAt": null,
+      "notes": "HIGH MINIMUM: 18,000 points required to redeem — show values but warn user they cannot redeem until minimum is reached. 1 MR/₹50 on eligible spends; no RPs on fuel from Jun 12 2025, utilities, insurance, cash; hotels rate ₹0.58 based on Taj voucher via 24K Gold Collection (24,000 MR = ₹14,000); shopping rate ₹0.33 based on Amazon/Flipkart via 18K Gold Collection (18,000 MR = ₹6,000); airline transfer: 5 MR = 2 partner miles; monthly bonus: 1,000 MR on 4 txns ₹1,500; AmEx not issuing new cards to new applicants in India as of 2025; source: americanexpress.com/in/credit-cards/membership-rewards-card/"
+    },
+    {
+      "id": "yes-first-exclusive",
+      "name": "Yes First Exclusive (YES RESERV)",
+      "bank": "YES Bank",
+      "pointsPerRupee": 0.03,
+      "expiryMonths": 36,
+      "minRedemptionPoints": 100,
+      "redemptionRates": {
+        "cashback": 0.25,
+        "flights": 0.10,
+        "hotels": 0.10,
+        "shopping": 0.25,
+        "statementCredit": 0.25
+      },
+      "bonusCategories": [
+        { "category": "offline-spends", "multiplier": 2.0 },
+        { "category": "online-spends", "multiplier": 4.0 }
+      ],
+      "cappedAt": null,
+      "notes": "Rebranded as YES RESERV; 6 RPs/₹200 base on select categories (insurance, education, utilities, telecom, rent); 12 RPs/₹200 offline; 24 RPs/₹200 online; flights/hotels rate based on miles transfer: 10 RPs = 1 InterMile or 1 Club Vistara point; max 1L RPs/month transferable; renewal benefit: 8,000 RPs on annual fee payment; ₹100 redemption fee; domestic lounge access requires ₹1L quarterly spend from Apr 2025; source: yes.bank.in/personal-banking/yes-first/cards/credit-card"
+    },
+    {
+      "id": "idfc-first-wealth",
+      "name": "IDFC First Wealth",
+      "bank": "IDFC FIRST Bank",
+      "pointsPerRupee": 0.015,
+      "expiryMonths": 0,
+      "minRedemptionPoints": 0,
+      "redemptionRates": {
+        "cashback": 0.25,
+        "flights": 0.25,
+        "hotels": 0.25,
+        "shopping": 0.25,
+        "statementCredit": 0.25
+      },
+      "bonusCategories": [
+        { "category": "incremental-spends-above-20000-monthly", "multiplier": 3.33 }
+      ],
+      "cappedAt": null,
+      "notes": "Lifetime free; 3 RPs/₹200 base; 10 RPs/₹200 on spend above ₹20,000/month; +33% bonus RPs on hotel bookings via IDFC FIRST app; +13% bonus RPs on flight bookings via app; reward points never expire; no RPs on fuel, govt, rent, education, wallet, insurance, utilities, EMI; ₹99 + GST redemption fee per transaction; source: idfcfirst.bank.in/credit-card/wealth"
+    },
+    {
+      "id": "axis-cashback",
+      "name": "Axis Bank Cashback",
+      "bank": "Axis Bank",
+      "pointsPerRupee": 0.02,
+      "expiryMonths": 0,
+      "minRedemptionPoints": 0,
+      "redemptionRates": {
+        "cashback": 1.00,
+        "flights": 0.00,
+        "hotels": 0.00,
+        "shopping": 0.00,
+        "statementCredit": 1.00
+      },
+      "bonusCategories": [
+        { "category": "online-spends", "multiplier": 2.5 },
+        { "category": "offline-spends", "multiplier": 1.0 }
+      ],
+      "cappedAt": 500,
+      "notes": "Replaces the discontinued Citi Cashback card (Citibank India migrated to Axis Bank Jul 2024); flat 2% cashback on online spends; 1% on offline spends; 5% on preferred partners (BigBasket, Swiggy, Zomato); cashback capped at ₹500/month on online, ₹200/month on offline; auto-credited to statement; no RPs on fuel, EMI, wallet; source: axisbank.com/retail/cards/credit-card/cashback-credit-card"
+    },
+    {
+      "id": "rbl-shoprite",
+      "name": "RBL Shoprite",
+      "bank": "RBL Bank",
+      "pointsPerRupee": 0.01,
+      "expiryMonths": 24,
+      "minRedemptionPoints": 0,
+      "redemptionRates": {
+        "cashback": 0.25,
+        "flights": 0.25,
+        "hotels": 0.25,
+        "shopping": 0.25,
+        "statementCredit": 0.25
+      },
+      "bonusCategories": [
+        { "category": "grocery", "multiplier": 20.0 }
+      ],
+      "cappedAt": 1000,
+      "notes": "1 RP/₹100 base; 20 RPs/₹100 on grocery capped 1,000 RPs/month; no RPs on fuel, utilities, insurance, railways, wallet, quasi-cash, education, govt (from Oct 2024); welcome bonus: 2,000 RPs on first transaction within 30 days of card issuance; ₹99 + GST redemption fee (one-time per day); source: rblbank.com/personal-banking/cards/credit-cards/shoprite-credit-card"
+    }
+  ]
+}
