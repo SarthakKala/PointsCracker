@@ -3,7 +3,7 @@ BUILD_DIR = ../../public
 build:
 	emcc calculator.cpp -o $(BUILD_DIR)/calculator.js \
 		-s EXPORTED_FUNCTIONS='["_calculate","_getPointsValueSummary"]' \
-		-s EXPORTED_RUNTIME_METHODS='["ccall","cwrap","UTF8ToString","stringToUTF8","lengthBytesUTF8","_malloc","_free"]' \
+		-s EXPORTED_RUNTIME_METHODS='["cwrap"]' \
 		-s MODULARIZE=1 \
 		-s EXPORT_NAME='CalculatorModule' \
 		-s ALLOW_MEMORY_GROWTH=1 \

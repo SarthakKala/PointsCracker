@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "build:wasm": "powershell -NoProfile -ExecutionPolicy Bypass -File src/wasm/build.ps1",
     "preview": "vite preview"
   },
   "devDependencies": {

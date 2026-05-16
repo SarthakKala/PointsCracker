@@ -1,14 +1,55 @@
 import type { Card, CalculationResult, WasmModule } from '../types';
 
+type CalculatorModuleFactory = (
+  options?: { locateFile?: (file: string) => string },
+) => Promise<WasmModule>;
+
+declare global {
+  interface Window {
+    CalculatorModule?: CalculatorModuleFactory;
+  }
+}
+
 let module: WasmModule | null = null;
 let calculateFn: ((...args: number[]) => string) | null = null;
 
+function loadCalculatorScript(): Promise<void> {
+  const src = '/calculator.js';
+
+  return new Promise((resolve, reject) => {
+    if (window.CalculatorModule) {
+      resolve();
+      return;
+    }
+
+    const existing = document.querySelector<HTMLScriptElement>(`script[src="${src}"]`);
+    if (existing) {
+      existing.addEventListener('load', () => resolve(), { once: true });
+      existing.addEventListener(
+        'error',
+        () => reject(new Error('Failed to load calculator engine')),
+        { once: true },
+      );
+      return;
+    }
+
+    const script = document.createElement('script');
+    script.src = src;
+    script.async = true;
+    script.onload = () => resolve();
+    script.onerror = () => reject(new Error('Failed to load calculator engine'));
+    document.head.appendChild(script);
+  });
+}
+
 export async function initWasm(): Promise<void> {
-  // Emscripten glue is emitted to public/ by `make build` (not part of the TS program).
-  // @ts-expect-error — runtime asset at /calculator.js
-  const CalculatorModule = (await import('/calculator.js')).default as (
-    options?: { locateFile?: (file: string) => string },
-  ) => Promise<WasmModule>;
+  await loadCalculatorScript();
+
+  const CalculatorModule = window.CalculatorModule;
+  if (!CalculatorModule) {
+    throw new Error('CalculatorModule not found — run npm run build:wasm');
+  }
+
   const wasm = await CalculatorModule({
     locateFile: (file: string) => `/${file}`,
   });

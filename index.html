@@ -1,13 +1,44 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>pointscracker</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PointsCracker — Crack Your Reward Points</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="app">
+    <div id="loader" class="loader-overlay">
+      <div class="loader-spinner"></div>
+      <p class="loader-text">Loading engine...</p>
+    </div>
+
+    <header class="header">
+      <div class="logo">Points<span class="logo-accent">Cracker</span></div>
+      <p class="tagline">Crack the code on your reward points</p>
+    </header>
+
+    <main class="main-container">
+      <div id="expiry-warning" class="expiry-warning hidden"></div>
+
+      <section class="input-section">
+        <div id="card-selector-container"></div>
+        <div id="points-input-container"></div>
+        <button id="calculate-btn" class="calculate-btn" disabled>
+          Calculate Value
+        </button>
+      </section>
+
+      <section id="results-section" class="results-section hidden">
+        <div id="results-panel"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Rates sourced from official bank websites. Always verify before redeeming.</p>
+    </footer>
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
 </html>
