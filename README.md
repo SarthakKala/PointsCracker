@@ -9,7 +9,6 @@ PointsCracker is a browser-based calculator for Indian credit card reward points
 - **Vite** + **Vanilla TypeScript** (no React)
 - **C++** compiled to **WebAssembly** via **Emscripten**
 - **Plain CSS** (design tokens, dark fintech UI)
-- **vite-plugin-wasm** + **vite-plugin-top-level-await**
 - Local **`cards.json`** (15 Indian credit cards)
 
 ## ✨ Features
